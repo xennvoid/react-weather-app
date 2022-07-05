@@ -1,0 +1,45 @@
+:root {
+    -main-font-color:#313E48;
+}
+
+.weather__card {
+    margin: 1em auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #b55353;
+    padding: 2em 0;
+    width: 300px;
+    border-radius: 3px;
+    box-shadow: 0px 1px 7px rgba(0, 0, 0, 0.25);
+}
+
+.weather__img {
+    cursor: pointer;
+}
+
+.weather__temp {
+    font-size: 4em;
+    cursor: pointer;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -khtml-user-select: none;    /* Konqueror */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* Internet Explorer/Edge */
+    user-select: none;           /* Non-prefixed version, currently not supported by any browser */
+}
+
+.weather__city {
+    font-size: 2em;
+}
+
+.weather__description {
+    font-size: 1.5em;
+}
+
+.weather__others {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:5px;
+    padding: 1em;
+}

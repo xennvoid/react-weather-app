@@ -1,0 +1,16 @@
+.location__form {
+    width: 40%;
+}
+
+.location__search {
+    padding: 5px 10px;
+    width: 100%;
+    border-radius: 15px;
+    outline: none;
+    border: none;
+    background: #eee;
+}
+
+.location__search::placeholder {
+    font-family: 'Courier New', Courier, monospace;
+}
