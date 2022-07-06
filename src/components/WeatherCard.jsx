@@ -17,17 +17,19 @@ const WeatherCard = ({data,temp,tempUnits,celsiusToFahrenheit,fahrenheitToCelsiu
                     &deg;
                 {tempUnits}
             </div>
-            <div className={classes.weather__city}>{data.name}</div>
+            <div className={classes.weather__city}>
+                {data.name}<sup>{data.sys.country}</sup>
+            </div>
             <div className={classes.weather__description}>{data.weather[0].main}</div>
             <div className={classes.weather__others}>
                 <div className={classes.weather__humidity}>
-                    <p>Humidity</p>{data.main.humidity}
+                    <p>Humidity</p>{data.main.humidity}%
                 </div>
                 <div className={classes.weather__pressure}>
-                    <p>Pressure</p>{data.main.pressure}
+                    <p>Pressure</p>{data.main.pressure}hPa
                 </div>
                 <div className={classes.weather__wind}>
-                    <p>Wind speed</p>{data.wind.speed}
+                    <p>Wind speed</p>{data.wind.speed}m/s
                 </div>
             </div>
             

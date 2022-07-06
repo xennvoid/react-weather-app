@@ -20,6 +20,7 @@ function App() {
         setTemp(response.data.main.temp.toFixed())
         console.log(response.data)
       })
+      setTempUnits('C')
       setLocation('')   
     }     
   }
@@ -36,6 +37,7 @@ function App() {
 
   return (
     <div className="container">
+      <h1>Weather APP</h1>
       <Search location={location} setLocation={setLocation} getWeather={getWeather}/>
       {Object.keys(weatherData).length > 0?
         <WeatherCard 

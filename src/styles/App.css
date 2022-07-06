@@ -12,6 +12,10 @@ body {
     background: #4e3535;
 }
 
+h1{
+    font-size: 40px;
+}
+
 .container {
     margin: 0 auto;
     max-width: 960px;
