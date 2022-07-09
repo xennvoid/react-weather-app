@@ -1,7 +1,27 @@
+import { useEffect, useState } from 'react';
 import classes from './WeatherCard.module.css'
 
 
-const WeatherCard = ({data,temp,tempUnits,celsiusToFahrenheit,fahrenheitToCelsius}) => {
+const WeatherCard = ({data}) => {
+    
+    const [temp,setTemp] = useState(data.main.temp.toFixed())
+    const [tempUnits,setTempUnits] = useState('C')
+
+    useEffect(() => {
+        setTemp(data.main.temp.toFixed())
+        setTempUnits('C')
+    },[data])
+
+    function celsiusToFahrenheit() {
+        setTempUnits('F');
+        setTemp(((temp * 9/5) + 32).toFixed());
+    }
+    
+    function fahrenheitToCelsius() {
+        setTempUnits('C');
+        setTemp(((temp - 32) * 5/9).toFixed());
+    }
+
 
     return (
         <div className={classes.weather__card}>
